@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>مدونة سلمان | Salman's blog</title>
+</head>
+
+<body>
+  <p><a href="{{ get_url(path='/') }}">Home page</a></p>
+  <p><a href="{{ get_url(path='@/blog/_index.md') }}">Blog</a></p>
+  <section class="section">
+    <div class="container">
+      {% block content %} {% endblock %}
+    </div>
+  </section>
+</body>
+
+</html>
