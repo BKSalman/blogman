@@ -1,6 +1,6 @@
 +++
-title = "My first post"
+title = "مدونتي الأولى"
 date = 2024-04-02
 +++
 
-This is my first blog post.
+هذي هي مدونتي الأولى

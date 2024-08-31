@@ -1,7 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  This is my blog made with Zola.
-</h1>
+<style>
+  .home-container {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
+<div class="home-container">
+  <header>
+    <h1>مدونة سلمان</h1>
+  </header>
+  <img src="frog.jpg" />
+</div>
 {% endblock content %}

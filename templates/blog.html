@@ -1,13 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
-<ul>
-  <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
-  {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
+<style>
+  .blog-container {
+    background: var(--primary-color);
+    color: var(--text-color);
+  }
+
+  a {
+    color: unset;
+    text-decoration: none;
+  }
+</style>
+<div class="blog-container">
+  <header>
+    <h1 class="title">
+      {{ section.title }}
+    </h1>
+  </header>
+  <ul>
+    <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
+    {% for page in section.pages %}
+    <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
 {% endblock content %}
