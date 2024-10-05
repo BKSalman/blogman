@@ -5,6 +5,24 @@
   .blog-post-container {
     background: var(--primary-color);
     color: var(--text-color);
+    margin: 1rem;
+  }
+
+  a {
+    color: var(--link-text-color);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  pre {
+    direction: initial;
+  }
+
+  code {
+    background: #2B303B;
+    color: #C0C5CE;
   }
 </style>
 <div class="blog-post-container">
@@ -14,6 +32,7 @@
     </h1>
   </header>
   <p class="subtitle"><strong>{{ page.date }}</strong></p>
+  <br />
   {{ page.content | safe }}
 </div>
 <div class="comments">
