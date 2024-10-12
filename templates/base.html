@@ -42,6 +42,26 @@
       --font-family: 'Tajawal', sans-serif;
     }
 
+    @media (min-width: 768px) {
+      html {
+        font-size: 24px;
+      }
+
+      body {
+        line-height: 2;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      html {
+        font-size: 1em;
+      }
+
+      body {
+        max-width: 60rem;
+      }
+    }
+
     body {
       font-family: var(--font-family);
       background-color: var(--header-text-color);
@@ -49,7 +69,6 @@
       margin: auto;
       padding: 0;
       line-height: 1.6;
-      max-width: 50rem;
       background: var(--background-color);
     }
 
