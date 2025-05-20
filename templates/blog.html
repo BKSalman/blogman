@@ -8,21 +8,43 @@
   }
 
   a {
-    color: unset;
+    color: #08CEE6;
     text-decoration: none;
   }
+
+  article {
+    margin-right: 1em;
+  }
 </style>
+
 <div class="blog-container">
   <header>
     <h1 class="title">
       {{ section.title }}
     </h1>
   </header>
-  <ul>
-    <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
-    {% for page in section.pages %}
-    <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  <div class="posts">
+    {% for page in paginator.pages %}
+    <article class="post">
+      <h2>{{ page.title }}</h2>
+      <div class="description">
+        {{ page.description | safe }}
+      </div>
+      <div class="read-more">
+        <h3>
+          <a href="{{ page.permalink | safe }}">إقرأ المزيد...</a>
+        </h3>
+      </div>
+    </article>
     {% endfor %}
-  </ul>
+  </div>
+  <nav class="pagination">
+    {% if paginator.previous %}
+    <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
+    {% endif %}
+    {% if paginator.next %}
+    <a class="next" href="{{ paginator.next }}">Next ›</a>
+    {% endif %}
+  </nav>
 </div>
 {% endblock content %}
