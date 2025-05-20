@@ -38,8 +38,6 @@
   {{ page.content | safe }}
 </div>
 <div class="comments">
-  <script src="https://utteranc.es/client.js" repo="bksalman/blogman" issue-term="pathname" label="blog-comment"
-    theme="dark-blue" crossorigin="anonymous" async>
-    </script>
+  {% include "_giscus_script.html" %}
 </div>
 {% endblock content %}

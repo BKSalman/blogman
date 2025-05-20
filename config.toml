@@ -14,3 +14,6 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+giscus_repo = "bksalman/blogman"
+giscus_repo_id = "R_kgDOLqdPZQ"
+giscus_data_category_id = "DIC_kwDOLqdPZc4ClCwv"
