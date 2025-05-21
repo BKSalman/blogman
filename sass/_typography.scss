@@ -1,5 +1,10 @@
 // Typography styles
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-family;
   font-weight: $heading-font-weight;
   line-height: 1.2;
@@ -32,15 +37,16 @@ h4 {
 
 p {
   margin-bottom: $spacing-unit;
-  
+
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0 $spacing-unit * 1.5 $spacing-unit $spacing-unit;
-  
+
   li {
     margin-bottom: $spacing-unit * 0.5;
   }
@@ -52,10 +58,10 @@ blockquote {
   margin: $spacing-unit 0;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: $border-radius;
-  
+
   p {
     font-style: italic;
-    
+
     &:last-child {
       margin-bottom: 0;
     }

@@ -8,11 +8,11 @@
 html {
   font-size: $base-font-size;
   scroll-behavior: smooth;
-  
+
   @media (min-width: $tablet-width) {
     font-size: 24px;
   }
-  
+
   @media (min-width: $desktop-width) {
     font-size: 18px;
   }
@@ -33,7 +33,7 @@ a {
   color: $link-color;
   text-decoration: none;
   transition: color $transition-speed ease;
-  
+
   &:hover {
     color: $accent-color;
   }
