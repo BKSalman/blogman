@@ -1,16 +1,48 @@
 {% extends "base.html" %}
 
 {% block content %}
-<style>
-  .home-container {
-    display: flex;
-    flex-direction: column;
-  }
-</style>
 <div class="home-container">
-  <header>
+  <header class="header">
     <h1>مدونة سلمان</h1>
+    <p>أكتب عن البرمجة والتقنية من وجهة نظري</p>
   </header>
-  <img src="/frog.jpg" />
+
+  <div class="recent-posts">
+    <h2>أحدث المقالات</h2>
+
+    {% set pages = get_section(path="blog/_index.md") %}
+    {% set recent_posts = pages.pages | slice(end=3) %}
+
+    {% if recent_posts | length > 0 %}
+    {% for page in recent_posts %}
+    <div class="card">
+      <h3 class="card__title">{{ page.title }}</h3>
+      <div class="card__content">{{ page.description }}</div>
+      {% if page.taxonomies.tags %}
+      <div class="post-tags">
+        {% for tag in page.taxonomies.tags %}
+        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <div class="card__footer">
+        <a href="{{ page.permalink }}" class="button">إقرأ المزيد</a>
+      </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>لا توجد مقالات حتى الآن.</p>
+    {% endif %}
+
+    <div class="text-center">
+      <a href="{{ get_url(path='@/blog/_index.md') }}" class="button">جميع المقالات</a>
+    </div>
+  </div>
+
+  <div class="figure">
+    <img src="{{ get_url(path='frog.jpg') }}" alt="صورة ضفدع" />
+    <figcaption>صورة ضفدع جميلة</figcaption>
+  </div>
 </div>
 {% endblock content %}

@@ -1,0 +1,17 @@
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <h3>{{ config.title }}</h3>
+      <div class="footer-links">
+        <a href="{{ get_url(path='/') }}">الصفحة الرئيسية</a>
+        <a href="{{ get_url(path='@/blog/_index.md') }}">المدونة</a>
+        <a href="{{ get_url(path='/') }}#about">عني</a>
+        <a href="{{ get_url(path='/') }}#contact">اتصل بي</a>
+      </div>
+      <div class="social-icons">
+        <a href="{{ config.extra.github }}" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <p class="copyright">© {{ now() | date(format="%Y") }} {{ config.title }}. جميع الحقوق محفوظة.</p>
+    </div>
+  </div>
+</footer>

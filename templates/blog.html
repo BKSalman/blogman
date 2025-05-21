@@ -1,49 +1,43 @@
 {% extends "base.html" %}
 
 {% block content %}
-<style>
-  .blog-container {
-    background: var(--primary-color);
-    color: var(--text-color);
-  }
-
-  a {
-    color: #08CEE6;
-    text-decoration: none;
-  }
-
-  article {
-    margin-right: 1em;
-  }
-</style>
-
 <div class="blog-container">
-  <header>
-    <h1 class="title">
-      {{ section.title }}
-    </h1>
+  <header class="header">
+    <h1 class="title">{{ section.title }}</h1>
   </header>
+
   <div class="posts">
     {% for page in paginator.pages %}
     <article class="post">
-      <h2>{{ page.title }}</h2>
-      <div class="description">
-        {{ page.description | safe }}
+      <div class="card">
+        <h3 class="card__title">{{ page.title }}</h3>
+        <div class="card__content">{{ page.description }}</div>
+        {% if page.taxonomies.tags %}
+        <div class="post-tags">
+          {% for tag in page.taxonomies.tags %}
+          <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="tag">{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="card__footer">
+          <a href="{{ page.permalink }}" class="button">إقرأ المزيد</a>
+        </div>
       </div>
-      <div class="read-more">
-        <h3>
-          <a href="{{ page.permalink | safe }}">إقرأ المزيد...</a>
-        </h3>
-      </div>
-    </article>
-    {% endfor %}
+    </article> {% endfor %}
   </div>
+
   <nav class="pagination">
     {% if paginator.previous %}
-    <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
+    <a class="previous" href="{{ paginator.previous }}">‹ السابق</a>
+    {% else %}
+    <span></span>
     {% endif %}
+
     {% if paginator.next %}
-    <a class="next" href="{{ paginator.next }}">Next ›</a>
+    <a class="next" href="{{ paginator.next }}">التالي ›</a>
+    {% else %}
+    <span></span>
     {% endif %}
   </nav>
 </div>

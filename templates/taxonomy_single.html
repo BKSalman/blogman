@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="taxonomy-term-container">
+  <header class="header">
+    <h1>{{ term.name }}</h1>
+  </header>
+  
+  <div class="posts">
+    {% for page in term.pages %}
+    <article class="post">
+      <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+      <div class="subtitle">{{ page.date | date(format="%Y-%m-%d") }}</div>
+      <div class="description">
+        {{ page.description | safe }}
+      </div>
+      <div class="read-more">
+        <h3>
+          <a href="{{ page.permalink | safe }}">إقرأ المزيد...</a>
+        </h3>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

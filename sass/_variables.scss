@@ -1,0 +1,33 @@
+// Color scheme
+// Keeping your original dark color scheme but refining it
+$primary-color: #2B2B38;
+$background-color: #1E212B;
+$text-color: #E3E3E3;
+$header-text-color: #EDEBEB;
+$link-color: #08CEE6;
+$accent-color: #FF6F61;
+$code-background: #2B303B;
+$code-text-color: #C0C5CE;
+
+// Typography
+$font-family: 'Tajawal', sans-serif;
+$base-font-size: 18px;
+$heading-font-weight: 700;
+$body-font-weight: 400;
+$line-height: 1.6;
+
+// Spacing
+$spacing-unit: 1rem;
+$container-width: 60rem;
+$content-padding: $spacing-unit * 1.5;
+
+// Breakpoints
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
+// Transitions
+$transition-speed: 0.3s;
+
+// Border radius
+$border-radius: 4px;

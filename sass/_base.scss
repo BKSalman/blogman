@@ -1,0 +1,80 @@
+// Reset and base styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $base-font-size;
+  scroll-behavior: smooth;
+  
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+  }
+  
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: $line-height;
+  margin: 0 auto;
+  padding: 0;
+  max-width: $container-width;
+  direction: rtl;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color $transition-speed ease;
+  
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: $border-radius;
+}
+
+pre {
+  direction: ltr;
+  background: $code-background;
+  padding: $spacing-unit;
+  border-radius: $border-radius;
+  overflow-x: auto;
+  margin: $spacing-unit 0;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+  background: $code-background;
+  color: $code-text-color;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
+}
+
+// Utility classes
+.container {
+  padding: $spacing-unit;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}

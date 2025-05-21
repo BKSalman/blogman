@@ -1,0 +1,80 @@
+// Typography styles
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+  font-weight: $heading-font-weight;
+  line-height: 1.2;
+  margin-bottom: $spacing-unit;
+  color: $header-text-color;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: $spacing-unit * 1.5;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: $spacing-unit * 2;
+  margin-bottom: $spacing-unit;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: $spacing-unit * 1.5;
+  margin-bottom: $spacing-unit * 0.5;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit * 0.5;
+}
+
+p {
+  margin-bottom: $spacing-unit;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul, ol {
+  margin: 0 $spacing-unit * 1.5 $spacing-unit $spacing-unit;
+  
+  li {
+    margin-bottom: $spacing-unit * 0.5;
+  }
+}
+
+blockquote {
+  border-right: 4px solid $accent-color;
+  padding: $spacing-unit;
+  margin: $spacing-unit 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: $border-radius;
+  
+  p {
+    font-style: italic;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.subtitle {
+  color: lighten($text-color, 10%);
+  font-size: 1rem;
+  margin-top: -$spacing-unit;
+  margin-bottom: $spacing-unit;
+}
+
+// RTL-specific adjustments for typography
+[dir="rtl"] {
+  blockquote {
+    border-right: 4px solid $accent-color;
+    border-left: none;
+    padding-right: $spacing-unit;
+    padding-left: 0;
+  }
+}

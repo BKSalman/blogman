@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="blog-post">
+  <div class="container">
+    <div class="post-header">
+      <h1>{{ page.title }}</h1>
+      <div class="post-meta">
+        <span><i class="far fa-calendar"></i> {{ page.date | date(format="%d/%m/%Y") }}</span>
+
+        {% if page.taxonomies.tags %}
+        <div class="post-tags">
+          {% for tag in page.taxonomies.tags %}
+          <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="tag">{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if page.extra.featured_image %}
+    <div class="post-featured-image">
+      <img src="{{ page.extra.featured_image }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+    <div class="post-content">
+      {{ page.content | safe }}
+    </div>
+
+    <div class="post-footer">
+      <div class="post-share">
+        <span>شارك: </span>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | urlencode }}&url={{ page.permalink | urlencode }}"
+          target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.permalink | urlencode }}&title={{ page.title | urlencode }}"
+          target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="post-comments">
+      <h3>التعليقات</h3>
+      <div class="comments-container">
+        {% include "_giscus_script.html" %}
+      </div>
+    </div>
+  </div>
+</article>
+{% endblock content %}

@@ -1,0 +1,45 @@
+/*
+ * Main stylesheet for Salman's blog
+ * This file imports all other Sass partials
+ */
+
+// Import variables first so they're available to all other partials
+@import "variables";
+
+// Import base styles
+@import "base";
+
+// Import typography styles
+@import "typography";
+
+// Import layout components
+@import "layout";
+
+// Import UI components
+@import "components";
+
+// Dark mode preference override
+@media (prefers-color-scheme: dark) {
+  // Already a dark theme, no changes needed
+}
+
+// Print styles
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  .nav, .footer, .comments {
+    display: none;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  pre, code {
+    border: 1px solid #ddd;
+  }
+}

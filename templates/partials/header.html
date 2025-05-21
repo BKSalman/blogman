@@ -1,0 +1,18 @@
+<header>
+  <div class="container">
+    <h1>{{ config.title }}</h1>
+    <p class="tagline">{{ config.description }}</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="{{ get_url(path='/') }}">الصفحة الرئيسية</a></li>
+    <li><a href="{{ get_url(path='@/blog/_index.md') }}">المدونة</a></li>
+    <li><a href="{{ get_url(path='/') }}#about">عني</a></li>
+    <li><a href="{{ get_url(path='/') }}#contact">اتصل بي</a></li>
+  </ul>
+  <div class="social-icons">
+    <a href="{{ config.extra.github }}" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+</nav>
