@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - Git</title>
+    <link href="https://blog.bksalman.com/tags/git/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.bksalman.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-10-06T00:00:00+00:00</updated>
+    <id>https://blog.bksalman.com/tags/git/atom.xml</id>
+    <entry xml:lang="en">
+        <title>المساهمة في المشاريع مفتوحة المصدر</title>
+        <published>2024-10-06T00:00:00+00:00</published>
+        <updated>2024-10-06T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.bksalman.com/blog/opensource-contribution/" type="text/html"/>
+        <id>https://blog.bksalman.com/blog/opensource-contribution/</id>
+        
+        <content type="html">&lt;p&gt;المساهمة في المشاريع مفتوحة المصدر هو شي جدا ممتاز للشخص اللي يبي يكتسب خبرة عملية جامدة، لأنها تخليك تتعامل مع اكثر من شي، مثل التعامل مع المساهمين الاخرين في المشروع، اتباع قوانين البرمجة الخاصة بالمشروع، والخ.&lt;&#x2F;p&gt;
+&lt;p&gt;فبدايةً، في الغالب يكون فيه شخص في بداية رحلته لتعلم البرمجة ووصل الى مرحلة يبي يرد الجميل ويحاول يساهم في المشاريع اللي ممكن استفاد منها خلال رحلته حتى الآن، وهذا الشي جدا جميل ومطلوب بشكل عام، والمفروض انك ما تخجل او تخاف من المساهمة بالمشاريع هذي، خاصة ان لها عائد معرفي وعملي لك انت شخصيا، وعائد للمشروع نفسه، فالموضوع جيد من الناحيتين.&lt;&#x2F;p&gt;
+&lt;p&gt;وكخطوة مبدئية بشكل عام الأفضل انك تبدأ بشي بسيط جدا في البداية، وقد يكون ببساطة تعديل اخطاء املائية في الكود او في الـREADME&lt;&#x2F;p&gt;
+&lt;p&gt;فممكن تمشي في البداية تدور على repository تهمك انت شخصيا لأن هذا راح يعزز رغبتك بالمساهمة، كمثال، ممكن تبي تساهم في مشروع لرجال طيب يقولون انه معلم و قوي، اسمه &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bksalman&#x2F;ytdlp-gui&quot;&gt;ytdlp-gui&lt;&#x2F;a&gt;، هذا مشروع سويته انا، وأرحب بالمساهمات من الجميع (اذا كانت المساهمة بالكود ممكن يكون فيه شوي استقعاد بس هذا الشي طبيعي)،
+طبعا المشروع مهب هو المهم بالسالفة، الأهم انك تلقى لك مشروع تحس انك تقدر تساهم فيه، وإذا كانت المساهمة في الكود فالأفضل انك تستفسر صاحب المشروع اذا وده بالشي اللي بتضيفه (سواء عن طريق issue او ايا كان)&lt;&#x2F;p&gt;
+&lt;p&gt;وكمثال عملي بساهم في مشروع &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mohad12211&#x2F;comp&quot;&gt;mohad12211&lt;&#x2F;a&gt; بإني اضيف له README فقط&lt;&#x2F;p&gt;
+&lt;p&gt;ففي البداية يبيلك تروح على الـrepository وتسوي لها fork:
+&lt;img src=&quot;&#x2F;contribution-tutorial-1.png&quot; alt=&quot;زر الـfork في github&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;بعدين بس اضغط على &amp;quot;create fork&amp;quot;:
+&lt;img src=&quot;&#x2F;contribution-tutorial-2.png&quot; alt=&quot;صفحة إنشاء الـfork&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;الـfork بشكل عام مجرد ينسخ المشروع الى حسابك في github فبتلقاه في حسابك بالشكل هذا:
+&lt;img src=&quot;&#x2F;contribution-tutorial-3.png&quot; alt=&quot;المشروع المنسوخ في حسابي&quot; &#x2F;&gt;
+السهم رقم 1 يشير على الكلام اللي يوضح ان هذي الـrepository مأخوذة كـfork&lt;&#x2F;p&gt;
+&lt;p&gt;السهم رقم 2 يشير الى ان سجل الـrepository كامل موجود&lt;&#x2F;p&gt;
+&lt;br&#x2F;&gt;
+&lt;p&gt;احتاج في البداية اني استنسخ المشروع على جهازي، كأي مشروع ثاني تاخذه من github عن طريق&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;BKSalman&#x2F;comp&lt;&#x2F;code&gt; (لاحظ اني قاعد استنسخ الـrepository اللي على حسابي)&lt;&#x2F;p&gt;
+&lt;p&gt;طبعا الـREADME اللي ابي اضيفه ممكن يكون ببساطة كالتالي:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;md&quot; style=&quot;background-color:#0f1419;color:#bfbab0;&quot; class=&quot;language-md &quot;&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span&gt;  # comp
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  A simple experimental compiler for C written in Rust
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;فتمشي على الخطوات المعتادة لـgit وتسوي &lt;code&gt;git add&lt;&#x2F;code&gt; + &lt;code&gt;git commit&lt;&#x2F;code&gt; + &lt;code&gt;git push&lt;&#x2F;code&gt;،
+بكذا التغييرات راح تنرفع على الـrepository اللي في حسابك:
+&lt;img src=&quot;&#x2F;contribution-tutorial-4.png&quot; alt=&quot;تغيير المشروع اللي بحسابي&quot; &#x2F;&gt;
+زي ما هو واضح بالصورة، مكتوب ان الـrepository اللي على حسابي متقدمة بـcommit واحد على الأصلية، فالخطوة الجاية هي اني اسوي pull request:
+&lt;img src=&quot;&#x2F;contribution-tutorial-5.png&quot; alt=&quot;زر الـpull request&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;بيطلع لك مقارنة بين شغلك والموجود في الـrepository الأصلية:
+&lt;img src=&quot;&#x2F;contribution-tutorial-6.png&quot; alt=&quot;مقارنة الـrepository&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;وبعدها تضغط &amp;quot;Create pull request&amp;quot; وتكتب عنوان للـpull request ورسالة تشرح فيها التغيير،&lt;&#x2F;p&gt;
+&lt;p&gt;بما ان تغييرنا مب كبير فصاحب الـrepository يقدر يشوفه ويفهم من نفسه فمب لازم تعليق
+&lt;img src=&quot;&#x2F;contribution-tutorial-7.png&quot; alt=&quot;صفحة إنشاء الـpull request&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;وبعدها بس تضغط &amp;quot;Create pull request&amp;quot; وبيدخلك على صفحة الـpull requests في الـrepository الأصلية:
+&lt;img src=&quot;&#x2F;contribution-tutorial-8.png&quot; alt=&quot;مقارنة الـrepository&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;والآن فقط تنتظر صاحب المشروع يرد عليك سواءً بالقبول او بطلب تعديلات، فأنت الآن تحت رحمته :)&lt;&#x2F;p&gt;
+&lt;p&gt;فباختصار قد تنظر إلى الخطوات على انها تكون بالشكل هذا:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;تلقى مشروع يهمك شخصيا&lt;&#x2F;li&gt;
+&lt;li&gt;تخطط وش تبي تساهم فيه، ما يهم مدى صغر او كبر المساهمة، لأن 99% من المشاريع يرحبون بالمساهمات جميع&lt;&#x2F;li&gt;
+&lt;li&gt;إذا كانت المساهمة في الكود افضل انك تستفسر إذا هم يتفقون مع الإضافة اللي بتضيفها، وتأكد انك تمشي على اسلوب كتابتهم للكود (ايه، يفرق الشي هذا)&lt;&#x2F;li&gt;
+&lt;li&gt;إذا كان README او شي له علاقة بالـdocumentation غالبا وضعك في السليم، ما تحتاج تستأذن&lt;&#x2F;li&gt;
+&lt;li&gt;إذا كان فيه نقاط رفعها لك صاحب المشروع على انها تتعدل او انها غير صالحة للمشروع، فوقتها تتحاور معاه وتصحح الاخطاء اذا تواجدت (غالبا بيجيك شوي تهزيء خفيف بس مشيها، كلنا اصحاب وحبايب)&lt;&#x2F;li&gt;
+&lt;li&gt;حاول انك تتبع الإجراءات السليمة في الأمور المتعلقة بـgit والى ما ذلك&lt;&#x2F;li&gt;
+&lt;li&gt;بس :) (ادع ان صاحب المشروع ما يهزئك واجد)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;br&#x2F;&gt;
+&lt;p&gt;&lt;strong&gt;(نشكر الاستاذ &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mohad12211&#x2F;&quot;&gt;mohad12211&lt;&#x2F;a&gt; على &amp;quot;المساهمة&amp;quot; في هذي المدونة :) )&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
